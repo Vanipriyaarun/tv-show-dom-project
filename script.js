@@ -1,12 +1,15 @@
 //You can edit ALL of the code here
+let allEpisodes;
 function setup() {
-  const allEpisodes = getAllEpisodes();
+  allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
 }
 
 function makePageForEpisodes(episodeList) {
   const rootElem = document.getElementById("root");
-  //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+  rootElem.textContent = ""
+  const episodeCount= document.getElementById("episodeCount");
+  episodeCount.innerHTML= `Displaying ${episodeList.length}/73 episodes`
   episodeList.forEach(episode=>{
     
     //create body element
@@ -32,5 +35,15 @@ function makePageForEpisodes(episodeList) {
     rootElem.appendChild(divEl)
   })
 }
+
+// Create Live Search 
+const searchInput=document.getElementById("searchInput");
+searchInput.addEventListener("keyup",(e)=>{
+const searchString=e.target.value.toUpperCase();
+const filteredEpi=allEpisodes.filter(episode=>{
+    return (episode.name.toUpperCase().includes(searchString) ||  episode.summary.toUpperCase().includes(searchString));
+})
+makePageForEpisodes(filteredEpi)
+})
 
 window.onload = setup();
