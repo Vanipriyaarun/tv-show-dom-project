@@ -2,6 +2,24 @@ body{
   margin:auto ;
   background-color: #7fc8ed;
 }
+.nav-bar {
+  display: flex;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+#searchInput {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+#episodeCount {
+  margin-left: 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
 #root {
   color: black;
   display: grid;
