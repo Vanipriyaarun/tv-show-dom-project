@@ -7,11 +7,16 @@ body{
   padding-left: 20px;
   margin: 20px 0;
 }
-
-#searchInput {
+#episodeOptions {
   width: 400px;
   height: 40px;
   border-radius: 10px;
+}
+#searchInput {
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  margin-left: 50px;
 }
 
 #episodeCount {
@@ -20,7 +25,7 @@ body{
   font-weight: 600;
 }
 
-#root {
+.rootContainer {
   color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -51,4 +56,24 @@ body{
   width: 350px;
   padding: 0 0 10px 60px;
   font-size: 1.1em;
+}
+.newContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 200px;
+  width: 1120px;
+}
+
+.newContainer div button {
+  width: 1120px
+}
+
+.newContainer div img {
+  padding: 10px 100px;
+  width: 900px;
+}
+
+.newContainer div p {
+  width: 900px;
 }
