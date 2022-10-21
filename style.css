@@ -1,19 +1,33 @@
-body{
-  margin:auto ;
+body {
+  margin: auto;
   background-color: #7fc8ed;
 }
+
 .nav-bar {
   display: flex;
   padding-left: 20px;
   margin: 20px 0;
 }
-#episodeOptions {
-  width: 400px;
+
+.selectMenu {
+  width: 250px;
   height: 40px;
   border-radius: 10px;
 }
+
+#episodeOptions {
+  margin-left: 50px;
+}
+
+#select {
+  margin-left: 50px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+}
+
 #searchInput {
-  width: 400px;
+  width: 250px;
   height: 35px;
   border-radius: 10px;
   margin-left: 50px;
@@ -29,16 +43,18 @@ body{
   color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap:30px;
-  margin:10px 0 10px 25px;
+  grid-gap: 30px;
+  margin: 10px 0 10px 25px;
   padding-right: 60px;
-  
+
 }
-.container{
+
+.container {
   border-radius: 10px;
-  background-color:rgb(61, 93, 144)
+  background-color: rgb(61, 93, 144)
 }
-.episodeButton{
+
+.episodeButton {
   padding: 15px;
   font-weight: 600;
   font-size: 1em;
@@ -48,32 +64,72 @@ body{
   margin-bottom: 20px;
   background-color: #979799;
 }
-.episodeImg{
+
+.episodeImg {
   width: 350px;
   padding: 0 0 10px 60px;
 }
-.episodeDescription{
+
+.episodeDescription {
   width: 350px;
   padding: 0 0 10px 60px;
   font-size: 1.1em;
 }
-.newContainer div {
+
+/* Style for Show List Page*/
+.showContainer {
+  border-radius: 10px;
+  background-color: rgb(61, 93, 144);
+  margin: 0 50px;
+}
+
+.secondContainer {
+  display: grid;
+  grid-template-areas: "btn btn btn"
+    "img text info"
+    "img text info";
+  row-gap: 1rem;
+  column-gap: 2rem;
+  margin: 2rem 0;
+}
+
+.innerContainer {
+  grid-area: info;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 50px 200px;
-  width: 1120px;
+  background-color: #7fc8ed;
+  border: solid gray 0.5px;
+  border-radius: 5px;
+  gap: 2em;
+  font-size: 1em;
+  list-style: none;
+  margin-bottom: 4rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  width: 150px
 }
 
-.newContainer div button {
-  width: 1120px
+.showButton {
+  grid-area: btn;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 1.4em;
+  border: solid gray 0.5px;
+  border-radius: 5px;
+  width: 1420px;
+  margin-bottom: 20px;
+  background-color: #979799;
 }
 
-.newContainer div img {
-  padding: 10px 100px;
-  width: 900px;
+.showImg {
+  grid-area: img;
+  padding-left: 4rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 
-.newContainer div p {
-  width: 900px;
+.showDescription {
+  grid-area: text;
+  font-size: 1em;
 }

@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | Vanipriya Piramanathan (Vanipriyaarun)</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="nav-bar">
-      <select name="episode" id="episodeOptions">
-        <option value="allEpisode">All Episodes</option>
-      </select>
-      <input id="searchInput" type="text" placeholder=" Search...." name="search">
-      <p id="episodeCount"></p>
-    </div>
-    <div id="root" class="rootContainer">
-    </div>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Show Project | Vanipriya Piramanathan (Vanipriyaarun)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
 
-    <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
-  </body>
+<body>
+  <div class="nav-bar" id="nav">
+    <select name="show" id="showOptions" class="selectMenu">
+      <option value="allShow">All Shows</option>
+    </select>
+    <select name="episode" id="episodeOptions" class="selectMenu">
+      <option value="allEpisode">All Episodes</option>
+    </select>
+    <input id="searchInput" type="text" placeholder=" Your Search Item...." name="search">
+    <p id="episodeCount"></p>
+  </div>
+  <div id="root" class="rootContainer">
+  </div>
+
+
+  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+  <!-- <script src="show.js"></script> -->
+
+  <!-- Loads YOUR javascript code -->
+  <script src="script.js"></script>
+</body>
+
 </html>
