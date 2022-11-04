@@ -6,28 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TV Show Project | Vanipriya Piramanathan (Vanipriyaarun)</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
+  <div class="headerPart">
+    <h1>TV SHOWS PROJECT</h1>
+  </div>
   <div class="nav-bar" id="nav">
+    <button id="home-Btn"><span>
+        <ion-icon name="home-outline"></ion-icon>
+      </span></button>
     <select name="show" id="showOptions" class="selectMenu">
-      <option value="allShow">All Shows</option>
+      <option value="allShow">Select Shows</option>
     </select>
     <select name="episode" id="episodeOptions" class="selectMenu">
       <option value="allEpisode">All Episodes</option>
     </select>
-    <input id="searchInput" type="text" placeholder=" Your Search Item...." name="search">
+    <input id="searchInput" type="text" placeholder="Search Item...." name="search">
     <p id="episodeCount"></p>
+  </div>
+  <button id="sortBtn" class="sortByRating">Sort By Rating</button>
+  <div id="filterOpt-Container">
   </div>
   <div id="root" class="rootContainer">
   </div>
 
-
   <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
   <!-- <script src="show.js"></script> -->
-
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!-- Loads YOUR javascript code -->
   <script src="script.js"></script>
 </body>
