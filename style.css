@@ -1,18 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: auto;
-  background-color: #7fc8ed;
+  background-color: #E1EBEE;
+
+}
+
+.headerPart {
+  background-image: url(img/background.jpg);
+  margin-top: 0;
+  height: 400px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+h1 {
+  margin-right: 100px;
+  text-shadow: 6px 6px 6px grey;
+  font-size: 3em;
 }
 
 .nav-bar {
   display: flex;
   padding-left: 20px;
-  margin: 20px 0;
+  margin: 50px 0;
 }
 
 .selectMenu {
   width: 250px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+#home-Btn {
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 8px;
+  height: 40px;
+  border: solid grey 1px;
+  background-color: #B0C4DE;
 }
 
 #episodeOptions {
@@ -39,47 +69,61 @@ body {
   font-weight: 600;
 }
 
+#sortBtn {
+  padding: 10px 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: #B0C4DE;
+  border: solid gray 0.5px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 .rootContainer {
   color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   margin: 10px 0 10px 25px;
-  padding-right: 60px;
-
+  padding-right: 25px;
 }
 
 .container {
   border-radius: 10px;
-  background-color: rgb(61, 93, 144)
+  background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .episodeButton {
   padding: 15px;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1.1em;
+  text-align: center;
   border: solid gray 0.5px;
   border-radius: 5px;
-  width: 470px;
   margin-bottom: 20px;
-  background-color: #979799;
+  font-family: 'Hepta Slab', serif;
+  color: white;
+  text-shadow: 6px 6px 6px grey;
 }
 
 .episodeImg {
-  width: 350px;
-  padding: 0 0 10px 60px;
+  margin: auto;
+  padding: 0 90px;
 }
 
 .episodeDescription {
-  width: 350px;
-  padding: 0 0 10px 60px;
+  padding: 10px 40px;
+  text-align: center;
   font-size: 1.1em;
+  color: white;
 }
 
 /* Style for Show List Page*/
 .showContainer {
   border-radius: 10px;
-  background-color: rgb(61, 93, 144);
+  background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+  box-shadow: 5px 10px 8px #888888;
   margin: 0 50px;
 }
 
@@ -87,7 +131,8 @@ body {
   display: grid;
   grid-template-areas: "btn btn btn"
     "img text info"
-    "img text info";
+    "img text info"
+    "select text info";
   row-gap: 1rem;
   column-gap: 2rem;
   margin: 2rem 0;
@@ -97,39 +142,186 @@ body {
   grid-area: info;
   display: flex;
   flex-direction: column;
-  background-color: #7fc8ed;
+  background-color: #B0C4DE;
   border: solid gray 0.5px;
   border-radius: 5px;
   gap: 2em;
-  font-size: 1em;
+  font-size: 1.1em;
   list-style: none;
   margin-bottom: 4rem;
   margin-right: 4rem;
   margin-top: 2rem;
   padding: 2rem;
-  width: 150px
+  width: 100px;
 }
 
 .showButton {
   grid-area: btn;
   padding: 15px;
-  font-weight: 600;
-  font-size: 1.4em;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
   border: solid gray 0.5px;
   border-radius: 5px;
-  width: 1420px;
-  margin-bottom: 20px;
-  background-color: #979799;
+  font-family: 'Hepta Slab', serif;
+  color: white;
+  text-shadow: 6px 6px 6px grey;
 }
 
 .showImg {
   grid-area: img;
   padding-left: 4rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 2rem;
 }
 
 .showDescription {
   grid-area: text;
-  font-size: 1em;
+  font-size: 1.1em;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.selectCast {
+  grid-area: select;
+  margin-bottom: 50px;
+  margin-left: 60px;
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid grey 1px;
+  background-color: #B0C4DE;
+}
+
+#selectEpiCast {
+  margin-top: 1rem;
+  margin-left: 20px
+}
+
+.readMoreBtn {
+  padding: 5px 15px;
+  margin-top: 10px;
+  background-color: #B0C4DE;
+  border: none;
+  cursor: pointer;
+}
+
+.textMore {
+  display: none;
+}
+
+.showDescription.showMore .textMore {
+  display: inline;
+}
+
+.episodeDescription.showMore .textMore {
+  display: inline;
+}
+
+
+@media screen and (max-width: 768px) {
+  .headerPart {
+    width: 768px;
+    background-position: left;
+    height: 300px;
+  }
+
+  h1 {
+    margin-right: 50px;
+    text-shadow: 6px 6px 6px grey;
+    font-size: 2em;
+  }
+
+  .selectMenu {
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  #searchInput {
+    width: 100px;
+    height: 18px;
+    border-radius: 5px;
+    margin-left: 20px;
+  }
+
+  #episodeOptions {
+    margin-left: 20px;
+  }
+
+  #episodeCount {
+    margin-left: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+
+  .showContainer {
+    border-radius: 10px;
+    margin: 0 30px;
+  }
+
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .showButton {
+    font-size: 1em;
+  }
+
+  .showImg {
+    padding: 10px 80px;
+  }
+
+  .showDescription {
+    font-size: 1em;
+    padding: 10px 80px;
+    text-align: center;
+  }
+
+  .innerContainer {
+    font-size: 1em;
+    padding: 3rem;
+    margin: auto;
+  }
+
+  .selectCast {
+    margin: auto;
+  }
+
+  .rootContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .episodeImg {
+    margin: 0 90px;
+  }
+
+  .episodeDescription {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headerPart {
+    width: 480px;
+  }
+
+  .showImg {
+    padding: 0 50px;
+    height: 400px
+  }
+
+  .showDescription {
+    padding: 0 50px;
+  }
+
+  .episodeImg {
+    margin: auto;
+    padding: 0 60px;
+  }
 }
