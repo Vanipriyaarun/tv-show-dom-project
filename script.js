@@ -3,7 +3,7 @@ let allEpisodes;
 let allShows;
 const navEl=document.getElementById("nav");
 function setup() {
-   fetch("http://api.tvmaze.com/shows")
+  fetch("https://api.tvmaze.com/shows")
   .then ((response)=>response.json())
   .then((data)=>{
     console.log(data);
@@ -174,7 +174,7 @@ function makePageForShows(showList){
     const option=document.createElement('option');
     option.textContent="Cast List";
     selectCast.appendChild(option);
-    let showUrl=`http://api.tvmaze.com/shows/${show.id}?embed=cast`
+    let showUrl=`https://api.tvmaze.com/shows/${show.id}?embed=cast`
     fetch(showUrl)
     .then ((response)=>response.json())
     .then((data)=>{
